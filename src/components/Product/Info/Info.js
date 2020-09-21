@@ -1,9 +1,12 @@
 import React from 'react';
 
-const Info = () => {
+import Graph from './Graph';
+
+const Info = (props) => {
   return (
     <div>
       I am the info component
+      <Graph data={props.data}/>
     </div>
   )
 }

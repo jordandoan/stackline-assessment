@@ -1,4 +1,5 @@
 import { ASSIGN_DATA } from '../actions';
+
 export const reducer = (state = initialState, action) => {
   switch(action.type) {
     case ASSIGN_DATA:
