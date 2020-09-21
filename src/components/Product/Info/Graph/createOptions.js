@@ -8,6 +8,7 @@ export const createOptions = (sales) => {
     },
     axisY: {
       interval: 200000,
+      gridThickness: 0,
     },
     axisX: {
       intervalType: "month",

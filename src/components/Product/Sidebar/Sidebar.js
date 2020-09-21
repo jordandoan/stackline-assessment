@@ -1,10 +1,21 @@
 import React from 'react';
 
-const Sidebar = (props) => {
+import styles from './Sidebar.module.scss';
+const Sidebar = ({ data }) => {
   return (
     <div>
-      I am the sidebar component
-      {props.data.title}
+      <div>
+        <img className={styles.image} src={ data.image } />
+        <h2>{ data.title }</h2>
+        <p>{ data.subtitle }</p>
+      </div>
+      <div>
+        { data.tags.map(tag => 
+          <div className={styles.tag}>
+            { tag }  
+          </div>
+        )}
+      </div>
     </div>
   )
 }

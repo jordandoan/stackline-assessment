@@ -1,12 +1,13 @@
 import React from 'react';
 
 import Graph from './Graph';
+import Table from './Table';
 
 const Info = (props) => {
   return (
     <div>
-      I am the info component
       <Graph data={props.data}/>
+      <Table data={props.data} />
     </div>
   )
 }

@@ -6,16 +6,21 @@ import Sidebar from './Sidebar';
 
 import { loadDefault } from '../../redux/actions';
 
+import styles from './Product.module.scss';
+
 const Product = (props) => {
   useEffect(() => {
     props.loadDefault();
   }, [])
 
   return (
-    <div>
-      Product page
-      <Info data={props.data}/>
-      <Sidebar data={props.data}/>
+    <div className={styles.main}>
+      <div className={styles.sidebar}>
+        <Sidebar data={props.data}/>
+      </div>
+      <div className={styles.info}>
+        <Info data={props.data}/>
+      </div>
     </div>
   )
 }
