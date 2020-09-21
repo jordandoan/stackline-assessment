@@ -8,3 +8,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Uses Redux to manage data (data is retrieved when page loads)
 - Different views not implemented, but can possibly switch between overview and sales view via sidebar
   - View setting is managed by Redux
+- Styles managed through modular SASS
