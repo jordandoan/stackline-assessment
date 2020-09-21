@@ -1,7 +1,26 @@
+import { ASSIGN_DATA } from '../actions';
 export const reducer = (state = initialState, action) => {
-  return state
+  switch(action.type) {
+    case ASSIGN_DATA:
+      return {
+        data: action.payload
+      }
+    default:
+      return state
+  }
 }
 
 const initialState = {
-  title: "Stackline Assessment"
+  data: {
+    "id": "",
+    "title": "",
+    "image": "",
+    "subtitle": "",
+    "brand": "",
+    "reviews": [],
+    "retailer": "",
+    "details": [],
+    "tags": [],
+    "sales": [],
+  }
 }
