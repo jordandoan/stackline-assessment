@@ -7,7 +7,8 @@ const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const Graph = (props) => {
   return (
-    <CanvasJSChart options={createOptions(props.data.sales)}
+    <CanvasJSChart 
+      options={createOptions(props.data.sales)}
     />
   )
 }

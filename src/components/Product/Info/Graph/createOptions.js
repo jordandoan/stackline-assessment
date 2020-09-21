@@ -1,21 +1,32 @@
+import CanvasJS from '../../../../canvasjs.min';
+
 export const createOptions = (sales) => {
   const { retailSales, wholesaleSales } = createData(sales);
   const options = {
     title: {
       text: "Retail Sales"
     },
+    axisY: {
+      interval: 200000,
+    },
+    axisX: {
+      intervalType: "month",
+      labelFormatter: function (e) {
+				return CanvasJS.formatDate(e.label, "MMM");
+			},
+    },
     data: [
       {				
-      type: "spline",
-      name:"Retail Sales",
-      showInLegend: true,
-      dataPoints: retailSales
+        type: "line",
+        name:"Retail Sales",
+        showInLegend: true,
+        dataPoints: retailSales
       },
       {
-        type: "spline",
-        name: "Wholesale Sales",
-        showInLegend: true,
-        dataPoints: wholesaleSales
+          type: "line",
+          name: "Wholesale Sales",
+          showInLegend: true,
+          dataPoints: wholesaleSales
       }
     ]
   }
@@ -34,13 +45,18 @@ const createData = (sales) => {
 }
 
 const createPoints = (point) => {
+  const year = point.weekEnding.substring(0,4);
+  const month = point.weekEnding.substring(5,7);
+  const day = point.weekEnding.substring(8,10);
+  const date = new Date(year, month, day);
+  date.setMonth(date.getMonth()-1);
   return [
     {
-      label: point.weekEnding,
+      label: date,
       y: point.retailSales,
     },
     {
-      label: point.weekEnding,
+      label: date,
       y: point.wholesaleSales,
     }
   ]
