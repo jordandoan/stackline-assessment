@@ -3,9 +3,11 @@ import React from 'react';
 import Graph from './Graph';
 import Table from './Table';
 
+import styles from './Info.module.scss';
+
 const Info = (props) => {
   return (
-    <div>
+    <div className={styles.main}>
       <Graph data={props.data}/>
       <Table data={props.data} />
     </div>

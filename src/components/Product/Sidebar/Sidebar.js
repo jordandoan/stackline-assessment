@@ -1,21 +1,13 @@
 import React from 'react';
 
-import styles from './Sidebar.module.scss';
+import ProductInfo from './ProductInfo';
+import Tabs from './Tabs';
+
 const Sidebar = ({ data }) => {
   return (
     <div>
-      <div>
-        <img className={styles.image} src={ data.image } />
-        <h2>{ data.title }</h2>
-        <p>{ data.subtitle }</p>
-      </div>
-      <div>
-        { data.tags.map(tag => 
-          <div className={styles.tag}>
-            { tag }  
-          </div>
-        )}
-      </div>
+      <ProductInfo data={data} />
+      <Tabs />
     </div>
   )
 }
