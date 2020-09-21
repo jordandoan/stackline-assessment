@@ -1,5 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Deployed via [Vercel](https://stackline-assessment.vercel.app/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+Deployed via [Vercel](https://stackline-assessment.vercel.app/).  
 
 ### Stackline Assessment solution by Jordan Doan
 
