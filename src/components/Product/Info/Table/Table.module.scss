@@ -2,7 +2,23 @@
   text-transform: uppercase;
 }
 
+.header th {
+  font-weight: 400;
+  padding: 1.5% 0;
+}
+
 .table {
+  border-collapse: collapse;
   width: 100%;
   text-align: center;
+  font-weight: normal;
+}
+
+.table td {
+  font-weight: 400;
+  color: gray;
+  border-color: lightgray;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  padding: 1% 0;
 }

@@ -3,14 +3,14 @@ import CanvasJS from '../../../../canvasjs.min';
 export const createOptions = (sales) => {
   const { retailSales, wholesaleSales } = createData(sales);
   const options = {
-    title: {
-      text: "Retail Sales"
-    },
     axisY: {
       interval: 200000,
       gridThickness: 0,
+      tickLength: 0,
+      labelFontColor: "transparent",
     },
     axisX: {
+      interval: 5,
       intervalType: "month",
       labelFormatter: function (e) {
 				return CanvasJS.formatDate(e.label, "MMM");

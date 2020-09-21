@@ -6,8 +6,10 @@ const ProductInfo = ({ data }) => {
     <div>
       <div>
         <img className={styles.image} src={ data.image } />
-        <h2>{ data.title }</h2>
-        <p>{ data.subtitle }</p>
+        <div className={styles.textMain}>
+          <h2>{ data.title }</h2>
+          <p className={styles.subtitle}>{ data.subtitle }</p>
+        </div>
       </div>
       <div>
         { data.tags.map(tag => 

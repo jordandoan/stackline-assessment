@@ -1,12 +1,13 @@
 import React from 'react';
 
+import styles from './Row.module.scss';
 
 const Row = ({ sale }) => {
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   return (
-    <tr>
+    <tr className={styles.row}>
       <td>{sale.weekEnding}</td>
       <td>${numberWithCommas(sale.retailSales)}</td>
       <td>${numberWithCommas(sale.wholesaleSales)}</td>

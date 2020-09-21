@@ -8,3 +8,13 @@
   display: inline;
   width: 100%;
 }
+
+.textMain {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+
+  .subtitle {
+    color: gray;
+  }
+}
