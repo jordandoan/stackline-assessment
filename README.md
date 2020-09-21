@@ -7,4 +7,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Uses CanvasJS to display data in linegraph from given JSON file.
 - Uses Redux to manage data (data is retrieved when page loads)
 - Different views not implemented, but can possibly switch between overview and sales view via sidebar
-- - View setting is managed by Redux
+  - View setting is managed by Redux
