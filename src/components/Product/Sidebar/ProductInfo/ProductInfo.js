@@ -5,7 +5,7 @@ const ProductInfo = ({ data }) => {
   return (
     <div>
       <div>
-        <img className={styles.image} src={ data.image } />
+        <img alt="product image" className={styles.image} src={ data.image } />
         <div className={styles.textMain}>
           <h2>{ data.title }</h2>
           <p className={styles.subtitle}>{ data.subtitle }</p>
