@@ -20,12 +20,15 @@ export const createOptions = (sales) => {
       {				
         type: "line",
         name:"Retail Sales",
+        markerType: "none",
         showInLegend: true,
         dataPoints: retailSales
       },
       {
           type: "line",
           name: "Wholesale Sales",
+          lineColor: "gray",
+          markerType: "none",
           showInLegend: true,
           dataPoints: wholesaleSales
       }

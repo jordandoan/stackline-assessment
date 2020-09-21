@@ -11,11 +11,11 @@ const ProductInfo = ({ data }) => {
           <p className={styles.subtitle}>{ data.subtitle }</p>
         </div>
       </div>
-      <div>
-        { data.tags.map(tag => 
-          <div className={styles.tag}>
+      <div className={styles.tags}>
+        { data.tags.map((tag, i) => 
+          <p key={i} className={styles.tag}>
             { tag }  
-          </div>
+          </p>
         )}
       </div>
     </div>

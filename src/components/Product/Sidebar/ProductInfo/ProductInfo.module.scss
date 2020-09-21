@@ -1,7 +1,14 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
 .tag {
+  display: inline;
   text-align: center;
   border: 1px solid gray;
   border-radius: 5px;
+  padding: 5px 10px;
+  margin: 2%;
 }
 
 .image {

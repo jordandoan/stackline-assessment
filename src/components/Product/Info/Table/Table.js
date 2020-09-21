@@ -8,14 +8,18 @@ const Table = (props) => {
   return (
     <div>
       <table className={styles.table}>
-        <tr className={styles.header}>
-          <th>Week Ending</th>
-          <th>Retail Sales</th>
-          <th>Wholesale Sales</th>
-          <th>Units Sold</th>
-          <th>Retailer Margin</th>
-        </tr>
-        {props.data.sales.map(sale => <Row sale={sale}/>)}
+        <thead>
+          <tr className={styles.header}>
+            <th>Week Ending</th>
+            <th>Retail Sales</th>
+            <th>Wholesale Sales</th>
+            <th>Units Sold</th>
+            <th>Retailer Margin</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.data.sales.map((sale, i) => <Row key={i} sale={sale}/>)}
+        </tbody>
       </table>
     </div>
   )
