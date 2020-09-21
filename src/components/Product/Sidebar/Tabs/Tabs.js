@@ -10,7 +10,6 @@ import { assignSales } from '../../../../redux/actions';
 import styles from './Tabs.module.scss';
 
 const Tabs = (props) => {
-  console.log(props.showSales);
   return (
     <div>
       <p onClick={() => props.assignSales(false)} className={`${styles.tab} ${!props.showSales ? '' : `${styles.unselected}`}`}>      

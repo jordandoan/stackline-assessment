@@ -1,8 +1,12 @@
 import CanvasJS from '../../../../canvasjs.min';
 
+/*
+  Creates options object necessary for line graph
+*/
 export const createOptions = (sales) => {
   const { retailSales, wholesaleSales } = createData(sales);
   const options = {
+    // Y-axis is sales 
     axisY: {
       interval: 200000,
       gridThickness: 0,
@@ -37,6 +41,10 @@ export const createOptions = (sales) => {
   return options
 }
 
+/*
+  Creates data points necessary for graph
+  A valid datapoint is: { label: date, y: wholesale or retail number}
+*/
 const createData = (sales) => {
   const retailSales = [];
   const wholesaleSales = [];
@@ -48,6 +56,10 @@ const createData = (sales) => {
   return { retailSales, wholesaleSales }
 }
 
+/*
+  Creates valid datapoint and date by parsing string
+  A valid datapoint is: { label: date, y: wholesale or retail number}
+*/
 const createPoints = (point) => {
   const year = point.weekEnding.substring(0,4);
   const month = point.weekEnding.substring(5,7);
