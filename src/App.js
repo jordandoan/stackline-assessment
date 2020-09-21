@@ -1,13 +1,13 @@
 import React from 'react';
-import { connect } from  'react-redux';
-
+import Header from './components/Header';
+import Product from './components/Product';
 
 import styles from './app.module.scss';
-const App = ({ title }) => {
+const App = () => {
   return (
-    <div>
-      <h1 className={styles.title}>Title: {title}</h1>
-      <p>Welcome!</p>
+    <div className={styles.main}>
+      <Header />
+      <Product />
     </div>
   )
 }
@@ -18,4 +18,4 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps, {})(App);
+export default App;
